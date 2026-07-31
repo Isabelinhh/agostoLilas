@@ -1,0 +1,49 @@
+/* Estilos complementares ao Tailwind CDN */
+
+.hero-texture {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(140, 70, 190, 0.10) 0, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(140, 70, 190, 0.10) 0, transparent 45%);
+}
+
+.gallery-img {
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px -8px rgba(108, 43, 160, 0.35);
+}
+
+details summary::-webkit-details-marker { display: none; }
+details summary { list-style: none; }
+
+/* Botão de opção do quiz */
+.quiz-option {
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease, transform .1s ease;
+}
+.quiz-option:active { transform: scale(0.98); }
+
+.quiz-option.correct {
+  background-color: #ecfdf5 !important;
+  border-color: #10b981 !important;
+  color: #065f46 !important;
+}
+.quiz-option.wrong {
+  background-color: #fef2f2 !important;
+  border-color: #ef4444 !important;
+  color: #991b1b !important;
+}
+
+/* Scroll suave */
+html { scroll-behavior: smooth; }
+
+/* Foco visível para acessibilidade */
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid #b983e3;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

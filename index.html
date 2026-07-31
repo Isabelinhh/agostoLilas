@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agosto Lilás — Juntas Somos Mais Fortes</title>
+<meta name="description" content="Campanha Agosto Lilás: conscientização sobre o fim da violência contra a mulher, informações sobre a Lei Maria da Penha, canais de denúncia e rede de apoio.">
+
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          lilac: {
+            50:  '#faf7fd',
+            100: '#f3ecfb',
+            200: '#e6d6f7',
+            300: '#d3b3ef',
+            400: '#b983e3',
+            500: '#9c5cd4',
+            600: '#8339c2',
+            700: '#6c2ba0',
+            800: '#552382',
+            900: '#3d1a5e',
+            950: '#26103c',
+          },
+        },
+        fontFamily: {
+          hand: ['"Caveat"', 'cursive'],
+          display: ['"Poppins"', 'sans-serif'],
+          body: ['"Nunito"', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body text-lilac-950 bg-white antialiased">
+
+<!-- ========== HEADER ========== -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-lilac-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-3 shrink-0">
+        <svg width="34" height="46" viewBox="0 0 34 46" class="shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 2C17 2 5 14 5 24.5C5 31.4 10.4 37 17 37C23.6 37 29 31.4 29 24.5C29 14 17 2 17 2Z" stroke="#8339c2" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17 37V44" stroke="#8339c2" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M11 44H23" stroke="#8339c2" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+        <div class="leading-none">
+          <div class="font-display font-bold text-sm tracking-wide text-lilac-950">AGOSTO</div>
+          <div class="font-display font-extrabold text-xl tracking-wide text-lilac-600 -mt-0.5">LILÁS</div>
+        </div>
+      </a>
+
+      <!-- Nav desktop -->
+      <nav class="hidden lg:flex items-center gap-8 font-semibold text-sm text-lilac-950">
+        <a href="#inicio" class="relative py-2 text-lilac-600 after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[1px] after:h-0.5 after:bg-lilac-600 after:rounded-full">Início</a>
+        <a href="#campanha" class="hover:text-lilac-600 transition-colors">Campanha</a>
+        <a href="#informacoes" class="hover:text-lilac-600 transition-colors">Informações</a>
+        <a href="#galeria" class="hover:text-lilac-600 transition-colors">Galeria</a>
+        <a href="#videos" class="hover:text-lilac-600 transition-colors">Vídeos</a>
+        <a href="#quiz" class="hover:text-lilac-600 transition-colors">Quiz</a>
+        <a href="#autoria" class="hover:text-lilac-600 transition-colors">Autoria</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="tel:180" class="hidden sm:inline-flex items-center gap-2 bg-lilac-600 hover:bg-lilac-700 transition-colors text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-sm shadow-lilac-300">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        LIGUE 180
+      </a>
+
+      <!-- Mobile menu button -->
+      <button id="menuBtn" aria-label="Abrir menu" class="lg:hidden text-lilac-700 p-2 -mr-2">
+        <svg id="iconOpen" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="iconClose" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" class="hidden"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-lilac-100 bg-white">
+    <nav class="flex flex-col px-4 py-3 font-semibold text-lilac-950">
+      <a href="#inicio" class="py-3 border-b border-lilac-50">Início</a>
+      <a href="#campanha" class="py-3 border-b border-lilac-50">Campanha</a>
+      <a href="#informacoes" class="py-3 border-b border-lilac-50">Informações</a>
+      <a href="#galeria" class="py-3 border-b border-lilac-50">Galeria</a>
+      <a href="#videos" class="py-3 border-b border-lilac-50">Vídeos</a>
+      <a href="#quiz" class="py-3 border-b border-lilac-50">Quiz</a>
+      <a href="#autoria" class="py-3">Autoria</a>
+      <a href="tel:180" class="mt-3 inline-flex items-center justify-center gap-2 bg-lilac-600 text-white font-bold text-sm px-5 py-3 rounded-full">📞 LIGUE 180</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section id="inicio" class="relative overflow-hidden bg-gradient-to-br from-lilac-100 via-lilac-50 to-white">
+  <div class="absolute inset-0 hero-texture pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative py-14 lg:py-20">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="font-hand text-3xl sm:text-4xl text-lilac-950 -mb-1">Juntas somos</p>
+        <h1 class="font-display font-extrabold text-4xl sm:text-6xl text-lilac-700 leading-[1.05] mb-5">MAIS FORTES!</h1>
+        <p class="text-lilac-900/80 text-base sm:text-lg max-w-md mb-7 leading-relaxed">
+          Agosto Lilás é o mês de conscientização pelo fim da violência contra a mulher.
+          Respeito não tem cor, mas tem atitude!
+        </p>
+        <a href="#informacoes" class="inline-flex items-center gap-2 bg-lilac-600 hover:bg-lilac-700 transition-colors text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-lilac-300/60">
+          SAIBA MAIS
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+    
+    <div class="mt-10 lg:mt-4 lg:absolute lg:top-14 lg:right-6 max-w-xs text-right">
+      <p class="font-hand text-2xl sm:text-3xl text-lilac-800 leading-tight">Respeito não tem cor, não tem gênero, tem consciência.</p>
+      <div class="flex justify-end mt-2">
+        <svg width="30" height="26" viewBox="0 0 24 24" fill="none" stroke="#8339c2" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INFO CARDS ========== -->
+<section id="campanha" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+    <div class="text-center">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-lilac-100 flex items-center justify-center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6c2ba0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l3 5-3 5M19 7l-3 5 3 5M5 7h14M3 17h4M17 17h4"/></svg>
+      </div>
+      <h3 class="font-display font-bold text-sm tracking-wide text-lilac-950 mb-2">LEI MARIA DA PENHA</h3>
+      <p class="text-sm text-lilac-900/70 leading-relaxed">Criada em 2006, é uma das leis mais importantes do mundo para proteger as mulheres da violência doméstica e familiar.</p>
+    </div>
+
+    <div class="text-center">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-lilac-100 flex items-center justify-center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6c2ba0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V7a2 2 0 0 0-4 0v.5M14 7V4a2 2 0 0 0-4 0v4M10 7V5a2 2 0 0 0-4 0v9M6 11.5V9a2 2 0 0 0-4 0v6a10 10 0 0 0 10 10h1a9 9 0 0 0 9-9v-4a2 2 0 0 0-4 0"/></svg>
+      </div>
+      <h3 class="font-display font-bold text-sm tracking-wide text-lilac-950 mb-2">TIPOS DE VIOLÊNCIA</h3>
+      <ul class="text-sm text-lilac-900/70 leading-relaxed space-y-0.5">
+        <li>Física</li><li>Psicológica</li><li>Moral</li><li>Patrimonial</li><li>Sexual</li>
+      </ul>
+    </div>
+
+    <div class="text-center">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-lilac-100 flex items-center justify-center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6c2ba0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <h3 class="font-display font-bold text-sm tracking-wide text-lilac-950 mb-2">COMO DENUNCIAR?</h3>
+      <p class="text-sm text-lilac-900/70 leading-relaxed">Ligue 180 (Central de Atendimento à Mulher) ou procure a Delegacia da Mulher mais próxima de você.</p>
+    </div>
+
+    <div class="text-center">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-lilac-100 flex items-center justify-center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6c2ba0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3 class="font-display font-bold text-sm tracking-wide text-lilac-950 mb-2">REDE DE APOIO</h3>
+      <p class="text-sm text-lilac-900/70 leading-relaxed">Você não está sozinha! Existem instituições e pessoas prontas para te acolher, apoiar e proteger.</p>
+    </div>
+
+    <div class="text-center">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-lilac-100 flex items-center justify-center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6c2ba0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <h3 class="font-display font-bold text-sm tracking-wide text-lilac-950 mb-2">VOCÊ IMPORTA</h3>
+      <p class="text-sm text-lilac-900/70 leading-relaxed">Toda mulher tem direito a uma vida sem violência, com respeito, liberdade e dignidade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INFORMAÇÕES DETALHADAS ========== -->
+<section id="informacoes" class="bg-lilac-50 py-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <span class="font-hand text-lilac-600 text-2xl">saiba mais</span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-lilac-950">Informações sobre a campanha</h2>
+    </div>
+
+    <div class="space-y-6">
+      <details open class="group bg-white rounded-2xl shadow-sm border border-lilac-100 p-6">
+        <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-lilac-800 text-lg">
+          O que é o Agosto Lilás?
+          <svg class="w-5 h-5 text-lilac-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="mt-4 text-lilac-900/80 leading-relaxed text-sm sm:text-base">
+          Instituído pela Lei nº 13.984/2020, o Agosto Lilás é dedicado à conscientização sobre o combate e o fim
+          da violência contra as mulheres. A data faz referência à sanção da Lei Maria da Penha (Lei nº 11.340),
+          assinada em 7 de agosto de 2006. Durante o mês, escolas, empresas e órgãos públicos promovem ações
+          educativas para difundir informações sobre direitos, prevenção e enfrentamento à violência doméstica.
+        </p>
+      </details>
+
+      <details class="group bg-white rounded-2xl shadow-sm border border-lilac-100 p-6">
+        <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-lilac-800 text-lg">
+          A Lei Maria da Penha
+          <svg class="w-5 h-5 text-lilac-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="mt-4 text-lilac-900/80 leading-relaxed text-sm sm:text-base">
+          Sancionada em 7 de agosto de 2006, a Lei nº 11.340 recebeu o nome em homenagem à biofarmacêutica
+          Maria da Penha Maia Fernandes, que sobreviveu a duas tentativas de feminicídio por parte do então
+          marido e se tornou símbolo da luta contra a impunidade. A lei prevê medidas protetivas de urgência,
+          endurece as penas para agressores e criou os Juizados de Violência Doméstica e Familiar contra a Mulher.
+        </p>
+      </details>
+
+      <details class="group bg-white rounded-2xl shadow-sm border border-lilac-100 p-6">
+        <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-lilac-800 text-lg">
+          Sinais de alerta
+          <svg class="w-5 h-5 text-lilac-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="mt-4 text-lilac-900/80 leading-relaxed text-sm sm:text-base">
+          Ciúmes excessivo, controle financeiro, isolamento de amigos e familiares, humilhações constantes,
+          ameaças e agressões físicas são sinais de um relacionamento abusivo. Reconhecer esses sinais é o
+          primeiro passo para buscar ajuda — seja para si mesma, seja para apoiar alguém próximo.
+        </p>
+      </details>
+
+      <details class="group bg-white rounded-2xl shadow-sm border border-lilac-100 p-6">
+        <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-lilac-800 text-lg">
+          Onde buscar ajuda
+          <svg class="w-5 h-5 text-lilac-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="mt-4 text-lilac-900/80 leading-relaxed text-sm sm:text-base space-y-2">
+          <p><strong class="text-lilac-700">Central de Atendimento à Mulher — 180:</strong> gratuito, funciona 24h por dia, todos os dias.</p>
+          <p><strong class="text-lilac-700">Polícia Militar — 190:</strong> em caso de emergência ou risco imediato.</p>
+          <p><strong class="text-lilac-700">Delegacia da Mulher (DEAM):</strong> atendimento especializado para registro de ocorrência.</p>
+          <p><strong class="text-lilac-700">CRAS e CREAS:</strong> assistência social e psicológica na sua região.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALERIA ========== -->
+<section id="galeria" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="text-center mb-10">
+    <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-lilac-950 flex items-center justify-center gap-3">
+      <span class="text-lilac-400">»</span> GALERIA DE FOTOS <span class="text-lilac-400">«</span>
+    </h2>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
+    <img src="https://i.pinimg.com/1200x/27/62/5e/27625e948838d0261b9aa1d23f95124d.jpg" alt="Flor lilás em close" class="gallery-img aspect-square object-cover rounded-2xl w-full shadow-sm">
+    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop" alt="Mulher livre ao pôr do sol" class="gallery-img aspect-square object-cover rounded-2xl w-full shadow-sm">
+    <img src="https://i.pinimg.com/1200x/9f/df/cc/9fdfcc2472f06375fe08190b3c6b89f3.jpg" alt="Mão sinalizando basta à violência" class="gallery-img aspect-square object-cover rounded-2xl w-full shadow-sm">
+    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&h=500&fit=crop" alt="Fita lilás símbolo da campanha" class="gallery-img aspect-square object-cover rounded-2xl w-full shadow-sm">
+    <img src="https://i.pinimg.com/736x/8e/89/fe/8e89fe2976333610ca24fe5e02d033a2.jpg" alt="Grupo de mulheres unidas" class="gallery-img aspect-square object-cover rounded-2xl w-full shadow-sm">
+    <img src="https://i.pinimg.com/736x/1b/76/af/1b76af613f16902b5913325f6c722ed4.jpg" alt="Campo de lavanda" class="gallery-img aspect-square object-cover rounded-2xl w-full shadow-sm">
+    <img src="https://i.pinimg.com/736x/15/c1/49/15c149e29b9221a8673d49a73f765503.jpg" alt="Mãos unidas em apoio" class="gallery-img aspect-square object-cover rounded-2xl w-full shadow-sm">
+    <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=500&h=500&fit=crop" alt="Flor lilás em tons suaves" class="gallery-img aspect-square object-cover rounded-2xl w-full shadow-sm">
+  </div>
+
+  
+</section>
+
+<!-- ========== VÍDEOS ========== -->
+<section id="videos" class="bg-lilac-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-lilac-950 flex items-center justify-center gap-3">
+        <span class="text-lilac-400">»</span> VÍDEOS <span class="text-lilac-400">«</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl overflow-hidden shadow-md bg-black aspect-video">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/7hJAVi51eNk?si=1C2UXtzraZa5T3jfS" title="Não se cale. Denuncie — Lei Maria da Penha" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-md bg-black aspect-video">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/rbS6ZPk60BM?si=PIYSVA7aXk-tdhzh" title="Lei Maria da Penha explicada" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+    <p class="text-center text-xs text-lilac-900/50 mt-4">* Substitua os IDs dos vídeos por outros de sua escolha, se preferir.</p>
+  </div>
+</section>
+
+<!-- ========== QUIZ ========== -->
+<section id="quiz" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="bg-lilac-50 rounded-3xl border border-lilac-100 p-6 sm:p-10">
+    <div class="grid md:grid-cols-[auto_1fr_auto] gap-8 items-start">
+
+      <!-- Lado esquerdo: título -->
+      <div class="md:w-40 shrink-0">
+        <h2 class="font-hand text-5xl text-lilac-700 leading-none">Quiz</h2>
+        <p class="text-sm text-lilac-900/70 mt-2">Teste seus conhecimentos!</p>
+      </div>
+
+      <!-- Centro: pergunta -->
+      <div class="w-full">
+        <div id="quizArea">
+          <span id="quizProgressLabel" class="inline-block bg-lilac-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Pergunta 1 de 5</span>
+          <p id="quizQuestion" class="font-display font-bold text-lilac-950 text-base sm:text-lg mb-5"></p>
+          <div id="quizOptions" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+          <div id="quizFeedback" class="mt-4 text-sm font-semibold hidden"></div>
+        </div>
+
+        <div id="quizResult" class="hidden text-center py-6">
+          <h3 class="font-display font-extrabold text-2xl text-lilac-950 mb-2">Quiz finalizado!</h3>
+          <p id="quizResultText" class="text-lilac-900/80 mb-5"></p>
+          <button id="quizRestartBtn" class="inline-flex items-center gap-2 bg-lilac-600 hover:bg-lilac-700 transition-colors text-white font-bold text-sm px-6 py-3 rounded-full">Refazer quiz</button>
+        </div>
+      </div>
+
+      <!-- Direita: pontuação -->
+      <div class="w-full md:w-52 shrink-0 bg-white rounded-2xl shadow-sm border border-lilac-100 p-5 text-center">
+        <svg class="mx-auto mb-2" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="1.8"><path d="M8 21h8M12 17v4M17 4H7v5a5 5 0 0 0 10 0V4z" fill="#fde68a"/><path d="M7 4H4a1 1 0 0 0-1 1v1a4 4 0 0 0 4 4M17 4h3a1 1 0 0 1 1 1v1a4 4 0 0 1-4 4"/></svg>
+        <p class="text-xs font-bold tracking-wide text-lilac-800 uppercase mb-2">Sua pontuação</p>
+        <p id="quizScore" class="font-display font-extrabold text-4xl text-lilac-600">0</p>
+        <p class="text-xs text-lilac-900/60 mb-4">de 5</p>
+        <button id="quizStartBtn" class="w-full bg-lilac-600 hover:bg-lilac-700 transition-colors text-white font-bold text-xs px-4 py-2.5 rounded-full">INICIAR QUIZ</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER / AUTORIA ========== -->
+<footer id="autoria" class="bg-lilac-900 text-lilac-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <div>
+        <svg width="26" height="34" viewBox="0 0 34 46" class="mb-4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 2C17 2 5 14 5 24.5C5 31.4 10.4 37 17 37C23.6 37 29 31.4 29 24.5C29 14 17 2 17 2Z" stroke="#d3b3ef" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17 37V44M11 44H23" stroke="#d3b3ef" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <p class="text-sm text-lilac-100/80 leading-relaxed mb-4">
+          Vamos juntas construir um mundo mais justo, seguro e igualitário, para todas as mulheres.
+        </p>
+        <p class="font-display font-bold text-xs tracking-widest text-lilac-200">RESPEITO. IGUALDADE. CONSCIÊNCIA.</p>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-xs tracking-widest text-lilac-300 mb-4">AUTORIA DO WEBSITE</h4>
+        <p class="text-sm text-lilac-100/80 leading-relaxed">
+          Desenvolvido por estudantes do SENAI como parte de um projeto educacional sobre o Agosto Lilás.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-xs tracking-widest text-lilac-300 mb-4">ESCOLA</h4>
+        <p class="font-display font-extrabold text-2xl text-white">SENAI</p>
+        <p class="text-sm text-lilac-100/70 mt-1">Serviço Nacional de Aprendizagem Industrial</p>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-xs tracking-widest text-lilac-300 mb-4">PROFESSORES ORIENTADORES</h4>
+        <ul class="text-sm text-lilac-100/85 space-y-2">
+          <li class="flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d3b3ef" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+            Leandro Gaudio Rosa
+          </li>
+          <li class="flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d3b3ef" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+            Adriano Rosa Mazetto
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-lilac-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-lilac-100/60">© 2026 — Agosto Lilás | Todos os direitos reservados.</p>
+      <div class="flex gap-4">
+        <a href="#" aria-label="Instagram" class="w-8 h-8 rounded-full bg-lilac-800 flex items-center justify-center hover:bg-lilac-700 transition-colors">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f3ecfb" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-full bg-lilac-800 flex items-center justify-center hover:bg-lilac-700 transition-colors">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f3ecfb" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
